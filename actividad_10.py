@@ -39,6 +39,13 @@ try:
             "stock": p_stock_remaining
         }
 
+    print("Estos son los productos registrados: ")
+    for id, item in products.items():
+        print(f"Código: {id}\nNombre: {item["nombre"]}\nCategoría: {item["category"]}\n"
+              f"Talla: {item["talla"]}\nPrecio: Q.{item["precio"]}\nCantidad en inventario: {item["stock"]}\n")
+
+
+
 
 except ValueError:
     print("Eso no es un número, intente de nuevo")

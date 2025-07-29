@@ -66,7 +66,21 @@ while key:
                 total += valuex["precio"]*valuex["stock"]
             print("El total del inventario en este momento es de: {}".format(total))
         case "5":
-            pass
+            print("Productos por categoría:")
+            male = 0
+            fem = 0
+            kid = 0
+            for id, second_key in products.items():
+                if second_key["category"].lower() == "hombre":
+                    male += 1
+                elif second_key["category"].lower() == "mujer":
+                    fem += 1
+                elif second_key["category"].lower() == "niño":
+                    kid += 1
+                else:
+                    pass
+            print(f"Hombre: {male}\nMujer: {fem}\nNiño: {kid}")
+
         case "6":
             print("Gracias por usar el programa")
             key = False

@@ -2,7 +2,7 @@ products = {}
 key = True
 print("-------Bienvenido al program de boutique-------")
 while key:
-    ops = input("\nSeleccione una opción:\n1. Agregar productos\n2. Ver productos\n3. Buscar producto")
+    ops = input("\nSeleccione una opción:\n1. Agregar productos\n2. Ver productos\n3. Buscar producto\n4. Salir")
     match ops:
         case "1":
             try:
@@ -56,7 +56,11 @@ while key:
             #Búsqueda
             searched = input("Coloque el código del producto que busca: ")
             if searched in products:
-                print("")
+                print(f"Nombre: {products[searched]["nombre"]}\nCategoría: {products[searched]["category"]}\n"
+                      f"Talla: {products[searched]["talla"]}\nPrecio: Q.{products[searched]["precio"]}\nCantidad en inventario: {products[searched]["stock"]}\n")
+        case "4":
+            print("Gracias por usar el programa")
+            key = False
 
 
 
